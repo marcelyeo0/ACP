@@ -27,21 +27,36 @@ def _pretty(var: str) -> str:
 
 
 def describe_axes(
-    var_coords: pd.DataFrame, var_contrib: pd.DataFrame, top: int = 3
+    var_coords: pd.DataFrame,
+    var_contrib: pd.DataFrame,
+    eigenvalues: pd.DataFrame | None = None,
+    top: int = 4,
 ) -> pd.DataFrame:
-    """Resume textuel de chaque axe : pole positif vs pole negatif."""
+    """Resume de chaque axe : variance expliquee, pole positif vs pole negatif.
+
+    Chaque variable est suivie de (correlation, contribution %). Un `*` signale une
+    contribution superieure a la moyenne (100/p) : seules celles-ci fondent le nom de l'axe.
+    """
+    threshold = 100 / len(var_contrib)
     rows = []
     for axis in var_coords.columns:
-        d = axis_drivers(var_coords, var_contrib, axis, top=20)
-        pos = [_pretty(v) for v in d[d["pole"] == "+"].index[:top]]
-        neg = [_pretty(v) for v in d[d["pole"] == "-"].index[:top]]
-        rows.append(
-            {
-                "axis": axis,
-                "pole_positif": ", ".join(pos) or "-",
-                "pole_negatif": ", ".join(neg) or "-",
-            }
-        )
+        d = pd.DataFrame({"r": var_coords[axis], "c": var_contrib[axis]})
+        d = d.sort_values("c", ascending=False)
+
+        def fmt(sub: pd.DataFrame) -> str:
+            return ", ".join(
+                f"{_pretty(v)} (r={row.r:+.2f}, {row.c:.1f} %{'*' if row.c > threshold else ''})"
+                for v, row in sub.head(top).iterrows()
+            )
+
+        row = {"axis": axis}
+        if eigenvalues is not None:
+            row["eigenvalue"] = round(float(eigenvalues.loc[axis, "eigenvalue"]), 2)
+            row["variance_pct"] = round(float(eigenvalues.loc[axis, "variance_pct"]), 1)
+            row["cumulative_pct"] = round(float(eigenvalues.loc[axis, "cumulative_pct"]), 1)
+        row["pole_positif"] = fmt(d[d["r"] > 0]) or "-"
+        row["pole_negatif"] = fmt(d[d["r"] < 0]) or "-"
+        rows.append(row)
     return pd.DataFrame(rows).set_index("axis")
 
 

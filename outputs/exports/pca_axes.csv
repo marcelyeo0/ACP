@@ -1,7 +1,7 @@
-axis,pole_positif,pole_negatif
-F1,"profondeur grocery i, profondeur beverages, profondeur liquor,wine,beer",-
-F2,"profondeur automotive, part school and office supplies, profondeur school and office supplies","part celebration, part magazines, part ladieswear"
-F3,"part personal care, part home care, part beauty","part liquor,wine,beer, part eggs, part beverages"
-F4,"part home and kitchen i, part lingerie, part home and kitchen ii","part meats, part deli, part poultry"
-F5,"part prepared foods, profondeur home and kitchen ii, part players and electronics","part meats, part personal care, part school and office supplies"
-F6,"part poultry, profondeur automotive, profondeur school and office supplies","part bread/bakery, part lawn and garden, profondeur players and electronics"
+axis,eigenvalue,variance_pct,cumulative_pct,pole_positif,pole_negatif
+F1,30.54,53.6,53.6,"profondeur grocery i (r=+0.99, 3.2 %*), profondeur beverages (r=+0.98, 3.1 %*), profondeur liquor,wine,beer (r=+0.98, 3.1 %*), profondeur dairy (r=+0.98, 3.1 %*)","part cleaning (r=-0.86, 2.4 %*), part grocery i (r=-0.86, 2.4 %*), part home care (r=-0.71, 1.7 %), part deli (r=-0.66, 1.4 %)"
+F2,5.12,9.0,62.6,"profondeur automotive (r=+0.80, 12.6 %*), part school and office supplies (r=+0.76, 11.3 %*), profondeur school and office supplies (r=+0.73, 10.5 %*), profondeur home and kitchen i (r=+0.68, 9.1 %*)","part celebration (r=-0.44, 3.8 %*), part magazines (r=-0.43, 3.6 %*), part ladieswear (r=-0.42, 3.5 %*), part lingerie (r=-0.38, 2.9 %*)"
+F3,4.06,7.1,69.7,"part personal care (r=+0.70, 12.1 %*), part home care (r=+0.60, 8.7 %*), part beauty (r=+0.56, 7.7 %*), part players and electronics (r=+0.53, 6.9 %*)","part liquor,wine,beer (r=-0.66, 10.6 %*), part eggs (r=-0.60, 8.9 %*), part beverages (r=-0.39, 3.8 %*), part produce (r=-0.31, 2.3 %*)"
+F4,2.52,4.4,74.1,"part home and kitchen i (r=+0.66, 17.5 %*), part lingerie (r=+0.62, 15.2 %*), part home and kitchen ii (r=+0.50, 9.9 %*), part liquor,wine,beer (r=+0.43, 7.2 %*)","part meats (r=-0.40, 6.2 %*), part deli (r=-0.36, 5.2 %*), part poultry (r=-0.31, 3.8 %*), part seafood (r=-0.21, 1.8 %*)"
+F5,2.26,4.0,78.1,"part prepared foods (r=+0.58, 14.8 %*), profondeur home and kitchen ii (r=+0.53, 12.2 %*), part players and electronics (r=+0.39, 6.6 %*), part seafood (r=+0.35, 5.4 %*)","part meats (r=-0.52, 11.7 %*), part personal care (r=-0.37, 6.0 %*), part school and office supplies (r=-0.30, 3.9 %*), part celebration (r=-0.28, 3.5 %*)"
+F6,1.7,3.0,81.1,"part poultry (r=+0.41, 10.0 %*), profondeur automotive (r=+0.37, 8.2 %*), profondeur school and office supplies (r=+0.37, 7.8 %*), part meats (r=+0.35, 7.3 %*)","part bread/bakery (r=-0.35, 7.2 %*), part lawn and garden (r=-0.32, 6.1 %*), profondeur players and electronics (r=-0.24, 3.3 %*), profondeur deli (r=-0.22, 2.8 %*)"

@@ -77,7 +77,7 @@ def run(s: Settings, skip_extract: bool = False) -> dict:
     # --- ACP ---------------------------------------------------------------------
     pca = fit_pca(X, s.pca_n_components, s.pca_target_variance)
     sup_coords = pca.project(X_sup) if len(X_sup) else pd.DataFrame()
-    axes_desc = describe_axes(pca.var_coords, pca.var_contrib)
+    axes_desc = describe_axes(pca.var_coords, pca.var_contrib, pca.eigenvalues)
     print(
         f"ACP : {pca.n_components} axes, {pca.eigenvalues['cumulative_pct'].iloc[pca.n_components - 1]:.1f} % de variance"
     )
