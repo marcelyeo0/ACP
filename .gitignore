@@ -16,3 +16,7 @@ outputs/models/*
 !data/processed/.gitkeep
 !outputs/figures/.gitkeep
 !outputs/models/.gitkeep
+
+# Resultats versionnes : figures et exports legers (consultables sans relancer le pipeline)
+!outputs/figures/*.png
+!outputs/exports/

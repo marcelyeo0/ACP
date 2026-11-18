@@ -1,0 +1,42 @@
+{
+  "n_stores_active": 51,
+  "stores_supplementary": [
+    18,
+    25,
+    52
+  ],
+  "n_variables": 58,
+  "pca_n_components": 6,
+  "pca_cum_variance_pct": 81.1,
+  "n_clusters": 3,
+  "kmeans_moved": 0,
+  "ari_vs_store_type": 0.698,
+  "backtest": {
+    "holt_winters": {
+      "mape": 4.37,
+      "rmse": 11251.19,
+      "mape_gain_vs_baseline_pct": 42.2,
+      "rmse_gain_vs_baseline_pct": 32.35
+    },
+    "seasonal_naive": {
+      "mape": 7.57,
+      "rmse": 16632.69,
+      "mape_gain_vs_baseline_pct": 0.0,
+      "rmse_gain_vs_baseline_pct": 0.0
+    },
+    "seasonal_naive_drift": {
+      "mape": 8.0,
+      "rmse": 17388.7,
+      "mape_gain_vs_baseline_pct": -5.66,
+      "rmse_gain_vs_baseline_pct": -4.55
+    }
+  },
+  "core_items_by_typology": {
+    "1": 3501,
+    "2": 2432,
+    "3": 2979
+  },
+  "mean_coverage_pct": 98.4,
+  "potential_units_missing": 1806012,
+  "potential_uplift_pct_on_core": 0.62
+}

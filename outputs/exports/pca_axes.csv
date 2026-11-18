@@ -1,0 +1,7 @@
+axis,pole_positif,pole_negatif
+F1,"profondeur grocery i, profondeur beverages, profondeur liquor,wine,beer",-
+F2,"profondeur automotive, part school and office supplies, profondeur school and office supplies","part celebration, part magazines, part ladieswear"
+F3,"part personal care, part home care, part beauty","part liquor,wine,beer, part eggs, part beverages"
+F4,"part home and kitchen i, part lingerie, part home and kitchen ii","part meats, part deli, part poultry"
+F5,"part prepared foods, profondeur home and kitchen ii, part players and electronics","part meats, part personal care, part school and office supplies"
+F6,"part poultry, profondeur automotive, profondeur school and office supplies","part bread/bakery, part lawn and garden, profondeur players and electronics"
