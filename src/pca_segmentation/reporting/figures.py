@@ -94,7 +94,7 @@ def dendrogram_plot(Z: np.ndarray, labels: list, n_clusters: int) -> plt.Figure:
     dendrogram(Z, labels=labels, color_threshold=cut, ax=ax, leaf_font_size=7)
     ax.axhline(cut, color=PALETTE[1], ls="--", lw=1)
     ax.set_title(f"Dendrogramme (Ward) — coupe a {n_clusters} classes")
-    ax.set_ylabel("Inertie inter-classes")
+    ax.set_ylabel("Hauteur de fusion (critere de Ward)")
     fig.tight_layout()
     return fig
 
